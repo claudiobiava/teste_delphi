@@ -1,0 +1,29 @@
+unit uClienteModel;
+
+interface
+
+type
+
+  TClienteModel = class
+
+//  property nomeCliente: string;
+
+
+  private
+    fsNomeCliente: string;
+
+  public
+    constructor criar;
+
+  end;
+
+implementation
+
+{ TClienteModel }
+
+constructor TClienteModel.criar;
+begin
+  fsnomeCliente := '';
+end;
+
+end.

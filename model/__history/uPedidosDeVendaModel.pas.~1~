@@ -1,0 +1,33 @@
+unit uPedidosDeVendaModel;
+
+interface
+
+type
+
+  TPedidosDeVendaModel = class
+
+  private
+    fnCodigoCliente,
+    fnNumeroPedido: cardinal;
+    fnDataEmissao: TDateTime;
+    fnValorTotal: real;
+
+  public
+    constructor criar;
+
+    property nNumeroPedido: cardinal read fnNumeroPedido write fnNumeroPedido;
+    property nDataEmissao: TDateTime read fnDataEmissao write fnDataEmissao;
+    property nCodigoCliente: cardinal read fnCodigoCliente write fnCodigoCliente;
+    property nValorTotal: real read fnValorTotal write fnValorTotal;
+
+ end;
+
+implementation
+
+constructor TPedidosDeVendaModel.criar;
+begin
+  fnValorTotal := 0;
+end;
+
+
+end.

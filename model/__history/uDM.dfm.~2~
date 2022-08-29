@@ -1,0 +1,58 @@
+object dm: Tdm
+  OldCreateOrder = False
+  Height = 478
+  Width = 442
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 'D:\Delphi10\TesteWK\Win32\Debug\libmysql.dll'
+    Left = 56
+    Top = 80
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'User_Name=root'
+      'Password=root'
+      'Database=wk'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 56
+    Top = 8
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    ScreenCursor = gcrHourGlass
+    Left = 256
+    Top = 16
+  end
+  object FDQueryCliente: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from cliente order by nome_cliente')
+    Left = 56
+    Top = 152
+    object FDQueryClientecodigo_cliente: TFDAutoIncField
+      FieldName = 'codigo_cliente'
+      Origin = 'codigo_cliente'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object FDQueryClientenome_cliente: TStringField
+      FieldName = 'nome_cliente'
+      Origin = 'nome_cliente'
+      Required = True
+      Size = 100
+    end
+    object FDQueryClienteuf_cliente: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'uf_cliente'
+      Origin = 'uf_cliente'
+      Size = 2
+    end
+    object FDQueryClientecidade_cliente: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'cidade_cliente'
+      Origin = 'cidade_cliente'
+      Size = 100
+    end
+  end
+end
