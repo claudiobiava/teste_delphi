@@ -1,0 +1,53 @@
+unit uPedidosDeVendaDAO;
+
+
+interface
+
+uses FireDAC.Comp.Client,
+
+FireDAC.Phys.MySQLDef, FireDAC.Stan.Intf, Dialogs, SysUtils,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.Phys.MySQL, FireDAC.VCLUI.Wait, FireDAC.Stan.Param, FireDAC.DatS,
+  FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,  uPedidosDeVendaModel,
+  FireDAC.Comp.UI;
+
+type
+
+  TPedidosDeVendaDAO = class
+
+  private
+    foFDConnection: TFDConnection;
+
+  public
+
+    constructor criar(poFDConnection: TFDConnection);
+    function persistirPedidosDeVendas(poPedidosDeVendaModel: TPedidosDeVendaModel): boolean;
+
+ end;
+
+
+implementation
+
+constructor TPedidosDeVendaDAO.criar(poFDConnection: TFDConnection);
+begin
+  self.foFDConnection := poFDConnection;
+end;
+
+
+function TPedidosDeVendaDAO.persistirPedidosDeVendas(poPedidosDeVendaModel: TPedidosDeVendaModel): boolean;
+var
+  oFDQuery: TFDQuery;
+begin
+  oFDQuery := TFDQuery.Create(nil);
+  oFDQuery.Connection := self.foFDConnection;
+  oFDQuery.ExecSQL(
+    'insert into pedido (data_emissao, codigo_cliente, valor_total) '+
+    'values (NOW(), ' + IntToStr(poPedidosDeVendaModel.nCodigoCliente) + ', 100)'
+  );
+
+  result := true;
+end;
+
+end.
+
