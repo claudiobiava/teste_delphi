@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/08/27 21:56:53.000.779,=C:\Users\claud\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/27 21:57:30.000.169,D:\Delphi10\Testes\MySQL\Unit1.dfm=C:\Users\claud\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/08/27 21:57:30.000.169,D:\Delphi10\Testes\MySQL\Unit1.pas=C:\Users\claud\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/27 21:57:33.000.453,D:\Delphi10\Testes\MySQL\Project1.dproj=C:\Users\claud\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/08/27 21:58:05.000.806,=D:\Delphi10\Testes\MySQL\Unit2.pas</Transaction>
+    <Transaction>2022/08/27 23:08:06.000.741,D:\Delphi10\Testes\MySQL\uDM.dfm=D:\Delphi10\Testes\MySQL\Unit2.dfm</Transaction>
+    <Transaction>2022/08/27 23:08:06.000.741,D:\Delphi10\Testes\MySQL\uDM.pas=D:\Delphi10\Testes\MySQL\Unit2.pas</Transaction>
+    <Transaction>2022/08/28 01:13:24.000.939,=D:\Delphi10\TesteWK\model\uDM.pas</Transaction>
+    <Transaction>2022/08/28 01:15:58.000.839,=D:\Delphi10\TesteWK\view\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 01:16:54.000.685,D:\Delphi10\TesteWK\view\uFPedidosVendas.dfm=D:\Delphi10\TesteWK\view\Unit1.dfm</Transaction>
+    <Transaction>2022/08/28 01:16:54.000.685,D:\Delphi10\TesteWK\view\uFPedidosVendas.pas=D:\Delphi10\TesteWK\view\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 01:17:45.000.603,D:\Delphi10\TesteWK\projetoTesteWK.dproj=D:\Delphi10\TesteWK\Project1.dproj</Transaction>
+    <Transaction>2022/08/28 01:19:43.000.160,D:\Delphi10\TesteWK\view\uFPedidosVendas.pas=D:\Delphi10\TesteWK\view\uFPedidosDeVenda.pas</Transaction>
+    <Transaction>2022/08/28 01:19:43.000.160,D:\Delphi10\TesteWK\view\uFPedidosVendas.dfm=D:\Delphi10\TesteWK\view\uFPedidosDeVenda.dfm</Transaction>
+    <Transaction>2022/08/28 01:21:18.000.112,=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 01:21:47.000.379,D:\Delphi10\TesteWK\model\uCliente.pas=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 01:23:23.000.241,D:\Delphi10\TesteWK\model\uClienteModel.pas=D:\Delphi10\TesteWK\model\uCliente.pas</Transaction>
+    <Transaction>2022/08/28 01:38:38.000.779,=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 01:39:43.000.358,D:\Delphi10\TesteWK\dao\uClienteDAO.pas=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 16:02:36.000.499,=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 16:03:17.000.325,D:\Delphi10\TesteWK\dao\uPedidosDeVendaDAO.pas=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 16:05:54.000.621,=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 16:06:31.000.905,D:\Delphi10\TesteWK\dao\uProdutoDAO.pas=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 16:08:54.000.803,=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 16:09:03.000.908,D:\Delphi10\TesteWK\model\uProdutoModel.pas=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 17:44:33.000.731,=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2022/08/28 17:49:18.000.691,D:\Delphi10\TesteWK\model\uPedidosDeVendaModel.pas=D:\Delphi10\TesteWK\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
