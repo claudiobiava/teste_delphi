@@ -2,8 +2,8 @@ object FPedidosDeVenda: TFPedidosDeVenda
   Left = 0
   Top = 0
   Caption = 'Pedidos de Venda'
-  ClientHeight = 490
-  ClientWidth = 736
+  ClientHeight = 530
+  ClientWidth = 775
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,97 +15,17 @@ object FPedidosDeVenda: TFPedidosDeVenda
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19
-  object GroupBox1: TGroupBox
-    Left = 1
-    Top = 137
-    Width = 727
-    Height = 272
-    Caption = ' Produtos'
-    TabOrder = 0
-    object Label2: TLabel
-      Left = 75
-      Top = 69
-      Width = 81
-      Height = 19
-      Caption = 'Quantidade'
-    end
-    object Label3: TLabel
-      Left = 58
-      Top = 101
-      Width = 98
-      Height = 19
-      Caption = 'Valor Unit'#225'rio'
-    end
-    object Splitter1: TSplitter
-      Left = 2
-      Top = 21
-      Height = 249
-      ExplicitLeft = 688
-      ExplicitTop = 64
-      ExplicitHeight = 100
-    end
-    object DBGrid1: TDBGrid
-      Left = 16
-      Top = 131
-      Width = 569
-      Height = 110
-      TabOrder = 0
-      TitleFont.Charset = DEFAULT_CHARSET
-      TitleFont.Color = clWindowText
-      TitleFont.Height = -16
-      TitleFont.Name = 'Tahoma'
-      TitleFont.Style = []
-    end
-    object btnInserirProduto: TButton
-      Left = 287
-      Top = 32
-      Width = 145
-      Height = 93
-      Caption = 'Inserir Produto'
-      TabOrder = 1
-      OnClick = btnInserirProdutoClick
-    end
-    object edtCodigoProduto: TLabeledEdit
-      Left = 160
-      Top = 34
-      Width = 121
-      Height = 27
-      EditLabel.Width = 134
-      EditLabel.Height = 19
-      EditLabel.Caption = 'C'#243'digo do Produto'
-      LabelPosition = lpLeft
-      NumbersOnly = True
-      TabOrder = 2
-      OnExit = edtCodigoProdutoExit
-    end
-    object edtQuantideProduto: TSpinEdit
-      Left = 160
-      Top = 64
-      Width = 121
-      Height = 29
-      MaxValue = 999999999
-      MinValue = 1
-      TabOrder = 3
-      Value = 1
-    end
-    object edtValorUnitarioProduto: TEdit
-      Left = 160
-      Top = 96
-      Width = 121
-      Height = 27
-      TabOrder = 4
-      Text = '0'
-    end
-  end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 736
+    Width = 775
     Height = 131
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
-    object Label1: TLabel
+    ExplicitLeft = 1
+    ExplicitWidth = 760
+    object lblCliente: TLabel
       Left = 21
       Top = 93
       Width = 48
@@ -377,9 +297,9 @@ object FPedidosDeVenda: TFPedidosDeVenda
         6E678410234C0000000049454E44AE426082}
       Stretch = True
     end
-    object Label4: TLabel
-      Left = 93
-      Top = 19
+    object lblTitulo: TLabel
+      Left = 105
+      Top = 24
       Width = 328
       Height = 45
       Caption = 'Pedidos de Venda'
@@ -399,11 +319,117 @@ object FPedidosDeVenda: TFPedidosDeVenda
       KeyField = 'codigo_cliente'
       ListField = 'nome_cliente'
       TabOrder = 0
+      OnCloseUp = DBLookupComboBoxClienteCloseUp
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 6
+    Top = 119
+    Width = 761
+    Height = 347
+    Caption = ' Produtos'
+    TabOrder = 0
+    object Label2: TLabel
+      Left = 75
+      Top = 69
+      Width = 81
+      Height = 19
+      Caption = 'Quantidade'
+    end
+    object Label3: TLabel
+      Left = 58
+      Top = 101
+      Width = 98
+      Height = 19
+      Caption = 'Valor Unit'#225'rio'
+    end
+    object Splitter1: TSplitter
+      Left = 2
+      Top = 21
+      Height = 324
+      ExplicitLeft = 688
+      ExplicitTop = 64
+      ExplicitHeight = 100
+    end
+    object lblValorTotal: TLabel
+      Left = 344
+      Top = 317
+      Width = 395
+      Height = 23
+      Alignment = taRightJustify
+      Caption = 'Valor total do pedido:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGreen
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object btnInserirProduto: TButton
+      Left = 287
+      Top = 32
+      Width = 145
+      Height = 93
+      Caption = 'Inserir Produto'
+      TabOrder = 0
+      OnClick = btnInserirProdutoClick
+    end
+    object edtCodigoProduto: TLabeledEdit
+      Left = 160
+      Top = 34
+      Width = 121
+      Height = 27
+      EditLabel.Width = 134
+      EditLabel.Height = 19
+      EditLabel.Caption = 'C'#243'digo do Produto'
+      LabelPosition = lpLeft
+      NumbersOnly = True
+      TabOrder = 1
+      OnExit = edtCodigoProdutoExit
+    end
+    object edtQuantideProduto: TSpinEdit
+      Left = 160
+      Top = 64
+      Width = 121
+      Height = 29
+      MaxValue = 999999999
+      MinValue = 1
+      TabOrder = 2
+      Value = 1
+    end
+    object edtValorUnitarioProduto: TEdit
+      Left = 160
+      Top = 96
+      Width = 121
+      Height = 27
+      TabOrder = 3
+      Text = '0'
+    end
+    object sgItensDoPedido: TStringGrid
+      Left = 14
+      Top = 139
+      Width = 731
+      Height = 171
+      Color = clWhite
+      ColCount = 6
+      DrawingStyle = gdsGradient
+      FixedColor = clBlue
+      FixedCols = 0
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRowSelect, goFixedRowDefAlign]
+      TabOrder = 4
+      OnKeyUp = sgItensDoPedidoKeyUp
+      ColWidths = (
+        144
+        158
+        107
+        145
+        142
+        64)
     end
   end
   object btnGravarPedido: TButton
     Left = 8
-    Top = 415
+    Top = 472
     Width = 145
     Height = 49
     Caption = 'Gravar Pedido'
@@ -416,9 +442,49 @@ object FPedidosDeVenda: TFPedidosDeVenda
     TabOrder = 2
     OnClick = btnGravarPedidoClick
   end
-  object dsClientes: TDataSource
-    DataSet = dm.FDQueryCliente
-    Left = 448
-    Top = 88
+  object btnCarregarPedidos: TButton
+    Left = 159
+    Top = 472
+    Width = 163
+    Height = 49
+    Caption = 'Carregar Pedidos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btnCarregarPedidosClick
+  end
+  object btnCancelarPedido: TButton
+    Left = 328
+    Top = 472
+    Width = 163
+    Height = 49
+    Caption = 'Cancelar Pedido'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    OnClick = btnCancelarPedidoClick
+  end
+  object btnLimpar: TButton
+    Left = 497
+    Top = 472
+    Width = 145
+    Height = 49
+    Caption = 'Limpar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = btnLimparClick
   end
 end
