@@ -6,7 +6,7 @@ uses Classes, generics.collections, uProdutoModel;
 
 
 type
-  TItemPedido = class
+  TItemPedidoModel = class
 
   private
     foProduto: TProdutoModel;
@@ -19,7 +19,6 @@ type
     property nQuantidade: cardinal read fnQuantidade write fnQuantidade;
     property nCodigoItemPedido: cardinal read fnCodigoItemPedido write fnCodigoItemPedido;
     property nValorUnitario: real read fnValorUnitario write fnValorUnitario;
-
 
     constructor criar;
     function getValorTotal: real;
@@ -37,7 +36,7 @@ type
 
 
   public
-    goListaItensPedido: TList<TItemPedido>;
+    goListaItensPedido: TList<TItemPedidoModel>;
 
     constructor criar;
     destructor destruir;
@@ -47,20 +46,20 @@ type
     property nCodigoCliente: cardinal read fnCodigoCliente write fnCodigoCliente;
 
     function getValorTotal: real;
-    function getItemPedidoByCodigoItemPedido(pnCodigo: integer): TItemPedido;
-    function deleteItemPedidoByCodigoItemPedido(pnCodigo: integer): TItemPedido;
+    function getItemPedidoByCodigoItemPedido(pnCodigo: integer): TItemPedidoModel;
+    function deleteItemPedidoByCodigoItemPedido(pnCodigo: integer): TItemPedidoModel;
  end;
 
 implementation
 
 constructor TPedidosDeVendaModel.criar;
 begin
-  goListaItensPedido := TList<TItemPedido>.Create;
+  goListaItensPedido := TList<TItemPedidoModel>.Create;
+  fnNumeroPedido := 0;
 end;
 
-
 function TPedidosDeVendaModel.getItemPedidoByCodigoItemPedido(
-  pnCodigo: integer): TItemPedido;
+  pnCodigo: integer): TItemPedidoModel;
 var
   i: integer;
 begin
@@ -76,7 +75,7 @@ begin
 end;
 
 function TPedidosDeVendaModel.deleteItemPedidoByCodigoItemPedido(
-  pnCodigo: integer): TItemPedido;
+  pnCodigo: integer): TItemPedidoModel;
 var
   i: integer;
 begin
@@ -87,11 +86,8 @@ begin
       break;
     end;
   end;
-
   goListaItensPedido.Delete(i);
-
 end;
-
 
 destructor TPedidosDeVendaModel.destruir;
 var
@@ -102,7 +98,6 @@ begin
     goListaItensPedido[i].Free;
   end;
   goListaItensPedido.Free;
-
 end;
 
 function TPedidosDeVendaModel.getValorTotal: real;
@@ -118,12 +113,12 @@ end;
 
 { TItemPedido }
 
-constructor TItemPedido.criar;
+constructor TItemPedidoModel.criar;
 begin
 
 end;
 
-function TItemPedido.getValorTotal: real;
+function TItemPedidoModel.getValorTotal: real;
 begin
   result := nValorUnitario * nQuantidade;
 end;
