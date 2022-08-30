@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids, udm,
-  Vcl.DBCtrls, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Samples.Spin, Vcl.Mask,
+  Vcl.DBCtrls, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Samples.Spin, Vcl.Mask, System.UITypes,
   Vcl.Imaging.pngimage, uProdutoModel, uPedidosDeVendaModel;
 
 type

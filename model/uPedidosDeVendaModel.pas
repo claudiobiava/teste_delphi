@@ -46,8 +46,8 @@ type
     property nCodigoCliente: cardinal read fnCodigoCliente write fnCodigoCliente;
 
     function getValorTotal: real;
-    function getItemPedidoByCodigoItemPedido(pnCodigo: integer): TItemPedidoModel;
-    function deleteItemPedidoByCodigoItemPedido(pnCodigo: integer): TItemPedidoModel;
+    function getItemPedidoByCodigoItemPedido(pnCodigo: cardinal): TItemPedidoModel;
+    function deleteItemPedidoByCodigoItemPedido(pnCodigo: cardinal): TItemPedidoModel;
  end;
 
 implementation
@@ -59,10 +59,11 @@ begin
 end;
 
 function TPedidosDeVendaModel.getItemPedidoByCodigoItemPedido(
-  pnCodigo: integer): TItemPedidoModel;
+  pnCodigo: cardinal): TItemPedidoModel;
 var
   i: integer;
 begin
+  result := nil;
   for i := 0 to goListaItensPedido.Count-1 do
   begin
     if goListaItensPedido[i].fnCodigoItemPedido = pnCodigo then
@@ -71,14 +72,14 @@ begin
       exit;
     end;
   end;
-
 end;
 
 function TPedidosDeVendaModel.deleteItemPedidoByCodigoItemPedido(
-  pnCodigo: integer): TItemPedidoModel;
+  pnCodigo: cardinal): TItemPedidoModel;
 var
   i: integer;
 begin
+  result := nil;
   for i := 0 to goListaItensPedido.Count-1 do
   begin
     if goListaItensPedido[i].fnCodigoItemPedido = pnCodigo then

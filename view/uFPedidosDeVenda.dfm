@@ -23,8 +23,6 @@ object FPedidosDeVenda: TFPedidosDeVenda
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 1
-    ExplicitWidth = 760
     object lblCliente: TLabel
       Left = 21
       Top = 93
@@ -352,9 +350,9 @@ object FPedidosDeVenda: TFPedidosDeVenda
       ExplicitHeight = 100
     end
     object lblValorTotal: TLabel
-      Left = 344
+      Left = 530
       Top = 317
-      Width = 395
+      Width = 209
       Height = 23
       Alignment = taRightJustify
       Caption = 'Valor total do pedido:'

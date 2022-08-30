@@ -122,7 +122,6 @@ function TPedidosDeVendaDAO.getPedidosDeVendasByNumeroPedido(pnNumeroPedido: car
 var
   oFDQuery: TFDQuery;
   oItemPedido: TItemPedidoModel;
-  i: integer;
 
   procedure carregarItensDoPedido(poPedidosDeVendaModel: TPedidosDeVendaModel);
   var
