@@ -1,0 +1,9 @@
+Alguns conceitos usados no projeto:
+
+Padrão de Projeto DAO (Data Access Object) para separação das regras de negócio das regras de acesso a banco de dados.
+Classes: TClienteDAO, TProdutoDAO, TPedidosDeVendaDAO.
+
+Model do MVC
+Classes: TClienteModel, TProdutoModel, TPedidosDeVendaModel, TItemPedidoModel.
+
+Acesso ao BD: usuário=root senha=root
