@@ -184,6 +184,10 @@ procedure TFPedidosDeVenda.btnLimparClick(Sender: TObject);
 begin
   goPedidosDeVendaModel.destruir();
   DBLookupComboBoxCliente.KeyValue := -1;
+  edtQuantideProduto.Value := 1;
+  edtValorUnitarioProduto.Text := '0';
+  edtCodigoProduto.Text := '';
+
   inicializarTela();
 end;
 
